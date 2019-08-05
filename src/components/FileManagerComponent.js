@@ -8,7 +8,7 @@ class FileManager extends Component {
 
     render() {
         return(
-      <div className="hk-wrapper hk-alt-nav">     
+      <div className="hk-wrapper hk-alt-nav">
         <div className="hk-pg-wrapper pb-0 px-0">
             <div className="container-fluid">
                 <div className="row">
@@ -37,7 +37,7 @@ class FileManager extends Component {
                                                 <a className="nav-link" href="javascript:void(0);">Video</a>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="javascript:void(0);">Deletd Files</a>
+                                                <a className="nav-link" href="javascript:void(0);">Deleted Files</a>
                                             </li>
                                         </ul>
 										<div className="btn btn-primary btn-block btn-file mt-20 mb-20">
@@ -78,27 +78,27 @@ class FileManager extends Component {
 													<div className="row">
 														<div className="col-lg-1 col-md-2 col-sm-4 col-6 text-center mb-30">
 															<img className="file-preview" src="dist/img/1foldericon.png" alt="fm-img"></img>
-															<span className="file-name mt-10">Griffin_v1.0</span> 
+															<span className="file-name mt-10">Griffin_v1.0</span>
 														</div>
 														<div className="col-lg-1 col-md-2 col-sm-4 col-6 text-center mb-30">
 															<img className="file-preview" src="dist/img/2image.png" alt="fm-img"></img>
-															<span className="file-name mt-10">Doodle_templatemonster.jpg</span> 
+															<span className="file-name mt-10">Doodle_templatemonster.jpg</span>
 														</div>
 														<div className="col-lg-1 col-md-2 col-sm-4 col-6 text-center mb-30">
 															<img className="file-preview" src="dist/img/3videoicon.png" alt="fm-img"></img>
-															<span className="file-name mt-10">Video.mp4</span> 
+															<span className="file-name mt-10">Video.mp4</span>
 														</div>
 														<div className="col-lg-1 col-md-2 col-sm-4 col-6 text-center mb-30">
 															<img className="file-preview" src="dist/img/4image.png" alt="fm-img"></img>
-															<span className="file-name mt-10">5_dark_support.jpg</span> 
+															<span className="file-name mt-10">5_dark_support.jpg</span>
 														</div>
 														<div className="col-lg-1 col-md-2 col-sm-4 col-6 text-center mb-30">
 															<img className="file-preview" src="dist/img/5psdicon.png" alt="fm-img"></img>
-															<span className="file-name mt-10">Chart2_recovered.psd</span> 
+															<span className="file-name mt-10">Chart2_recovered.psd</span>
 														</div>
 														<div className="col-lg-1 col-md-2 col-sm-4 col-6 text-center mb-30">
 															<img className="file-preview" src="dist/img/6image.png" alt="fm-img"></img>
-															<span className="file-name mt-10">Hound-Thumb2-1.png</span> 
+															<span className="file-name mt-10">Hound-Thumb2-1.png</span>
 														</div>
 													</div>
 												</div>
@@ -124,7 +124,7 @@ class FileManager extends Component {
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-link"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-download"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-more"></i></a>
-																	</span>	
+																	</span>
 																</td>
 															</tr>
 															<tr>
@@ -137,7 +137,7 @@ class FileManager extends Component {
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-link"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-download"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-more"></i></a>
-																	</span>	
+																	</span>
 																</td>
 															</tr>
 															<tr>
@@ -150,7 +150,7 @@ class FileManager extends Component {
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-link"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-download"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-more"></i></a>
-																	</span>	
+																	</span>
 																</td>
 															</tr>
 															<tr>
@@ -163,7 +163,7 @@ class FileManager extends Component {
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-link"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-download"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-more"></i></a>
-																	</span>	
+																	</span>
 																</td>
 															</tr>
 															<tr>
@@ -176,7 +176,7 @@ class FileManager extends Component {
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-link"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-download"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-more"></i></a>
-																	</span>	
+																	</span>
 																</td>
 															</tr>
 															<tr>
@@ -189,7 +189,7 @@ class FileManager extends Component {
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-link"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-download"></i></a>
 																		<a href="javascript:void(0)"><i className="zmdi zmdi-more"></i></a>
-																	</span>	
+																	</span>
 																</td>
 															</tr>
 														</tbody>
@@ -209,5 +209,5 @@ class FileManager extends Component {
         )
       }
   }
- 
+
 export default FileManager;

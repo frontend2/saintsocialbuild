@@ -7,11 +7,11 @@ export const COUPONS =
         code: "ABC123",
         type: 1,
         price: 9.99,
-        expiration_date: 'Mon Aug 05 2019 12:00:00 GMT-0500',
+        expiration_date: "05-08-19 1:24:53",
         packages: "packages",
         status: 1,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 1,
@@ -20,11 +20,11 @@ export const COUPONS =
         code: "ABC124",
         type: 1,
         price: 9.99,
-        expiration_date: 'Mon Aug 05 2019 12:00:00 GMT-0500',
+        expiration_date: "05-08-19 1:24:53",
         packages: "packages",
         status: 1,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 2,
@@ -33,10 +33,10 @@ export const COUPONS =
         code: "ABC125",
         type: 1,
         price: 9.99,
-        expiration_date: 'Mon Aug 05 2019 12:00:00 GMT-0500',
+        expiration_date: "05-08-19 1:24:53",
         packages: "packages",
         status: 1,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
     ];

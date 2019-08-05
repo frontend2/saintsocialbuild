@@ -8,8 +8,8 @@ export const LANG_LIST =
         icon: './images/lang.png',
         is_default: 1,
         status: 1,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 1,
@@ -19,8 +19,8 @@ export const LANG_LIST =
         icon: './images/lang2.png',
         is_default: 0,
         status: 0,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 2,
@@ -30,7 +30,7 @@ export const LANG_LIST =
         icon: './images/lang3.png',
         is_default: 0,
         status: 0,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
     ];

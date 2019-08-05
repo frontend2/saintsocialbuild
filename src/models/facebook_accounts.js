@@ -12,8 +12,8 @@ export const FACEBOOK_ACCOUNTS =
         avatar: "./images/avatar1.png",
         access_token: "abc123abc123",
         status: 0,
-        changed:'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 1,
@@ -27,8 +27,8 @@ export const FACEBOOK_ACCOUNTS =
         avatar: "./images/avatar2.png",
         access_token: "abc123abc456",
         status: 1,
-        changed:'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 2,
@@ -42,7 +42,7 @@ export const FACEBOOK_ACCOUNTS =
         avatar: "./images/avatar3.png",
         access_token: "xyz123abc123",
         status: 0,
-        changed:'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
     ];

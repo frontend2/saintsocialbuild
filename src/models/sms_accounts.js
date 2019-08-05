@@ -7,8 +7,8 @@ export const SMS_ACCOUNTS =
         pid: "0",
         username: 'FirstUsername',
         status: 0,
-        changed:'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 1,
@@ -17,8 +17,8 @@ export const SMS_ACCOUNTS =
         pid: "1",
         username: 'SecondUsername',
         status: 0,
-        changed:'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 2,
@@ -27,7 +27,7 @@ export const SMS_ACCOUNTS =
         pid: "2",
         username: 'ThirdUsername',
         status: 1,
-        changed:'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
 ]

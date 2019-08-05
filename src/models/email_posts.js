@@ -10,7 +10,7 @@ export const EMAIL_POSTS =
         content: "Sample content first email",
         hasAttachment: 0,
         forwardTo: "Sample Recipient",
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500',
+        created: "05-08-19 1:24:53",
         },
         {
         id: 0,
@@ -22,7 +22,7 @@ export const EMAIL_POSTS =
         content: "Sample content second email",
         hasAttachment: 1,
         forwardTo: "Sample Recipient",
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500',
+        created: "05-08-19 1:24:53",
         },
         {
         id: 0,
@@ -34,6 +34,6 @@ export const EMAIL_POSTS =
         content: "Sample content third email",
         hasAttachment: 0,
         forwardTo: "Sample Recipient",
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500',
+        created: "05-08-19 1:24:53",
         },
 ]

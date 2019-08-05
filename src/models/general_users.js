@@ -17,8 +17,8 @@ export const USERS =
         reset_key: "First user reset key",
         history_ip: "208.108.120.58",
         status: 0,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 1,
@@ -37,8 +37,8 @@ export const USERS =
         reset_key: "Second user reset key",
         history_ip: "108.108.120.58",
         status: 0,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 2,
@@ -57,7 +57,7 @@ export const USERS =
         reset_key: "Third user reset key",
         history_ip: "208.208.120.58",
         status: 0,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
     ];

@@ -11,8 +11,8 @@ export const CUSTOM_PAGES =
         description: 'Sample Description for first page',
         content: 'Sample Description for first page',
         status: 1,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 1,
@@ -25,8 +25,8 @@ export const CUSTOM_PAGES =
         description: 'Sample Description for second page',
         content: 'Sample Description for second page',
         status: 1,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 2,
@@ -39,7 +39,7 @@ export const CUSTOM_PAGES =
         description: 'Sample Description for third page',
         content: 'Sample Description for third page',
         status: 1,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
     ];

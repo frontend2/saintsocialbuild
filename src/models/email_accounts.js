@@ -8,8 +8,8 @@ export const EMAIL_ACCOUNTS =
         username: "FirstUsername",
         address: "first@email.com",
         avatar: "./images/avatar1.png",
-        changed:'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed:"05-08-19 1:24:53",
+        created:"05-08-19 1:24:53"
         },
         {
         id: 1,
@@ -19,8 +19,8 @@ export const EMAIL_ACCOUNTS =
         username: "SecondUsername",
         address: "second@email.com",
         avatar: "./images/avatar2.png",
-        changed:'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
         {
         id: 2,
@@ -30,7 +30,7 @@ export const EMAIL_ACCOUNTS =
         username: "ThirdUsername",
         address: "third@email.com",
         avatar: "./images/avatar3.png",
-        changed:'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: "05-08-19 1:24:53",
+        created: "05-08-19 1:24:53"
         },
 ]
