@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class SideBar extends Component {
 
@@ -59,10 +60,10 @@ class SideBar extends Component {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/filemanager">
                                 <span className="feather-icon"><i data-feather="folder"></i></span>
                                 <span className="nav-link-text">File Manager</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">

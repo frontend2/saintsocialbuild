@@ -1,14 +1,22 @@
+
 import React from 'react';
 import './App.css';
-import NavBar from './components/NavbarComponent';
-import SideBar from './components/SideBarComponent'
+import Main from './components/MainComponent';
+import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
+import FileManager from './components/FileManagerComponent';
+import Calendar from './components/CalendarComponent';
+import NavBar from './components/NavBarComponent';
+import SideBar from './components/SideBarComponent';
+
 
 function App() {
   return (
-    <div className="hk-wrapper hk-vertical-nav">
-      <NavBar />
-      <SideBar />
-    </div>  
+    
+    <BrowserRouter>
+       <NavBar />
+       <SideBar />
+       <Main />
+    </BrowserRouter>
   );
 }
 

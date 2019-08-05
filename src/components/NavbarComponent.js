@@ -6,7 +6,7 @@ class NavBar extends Component {
         return(
             <nav className="navbar navbar-expand-xl navbar-light fixed-top hk-navbar">
             <a id="navbar_toggle_btn" className="navbar-toggle-btn nav-link-hover" href="#"><span className="feather-icon"><i data-feather="menu"></i></span></a>
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href = "/main">
                 <img className="brand-img d-inline-block" src="dist/img/logo-light.png" alt="brand" />
             </a>
             <ul className="navbar-nav hk-navbar-content">
