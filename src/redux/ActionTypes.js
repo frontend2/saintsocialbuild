@@ -1,1 +1,3 @@
 export const ADD_CAPTION = 'ADD_CAPTION';
+export const DELETE_CAPTION = 'DELETE_CAPTION';
+export const EDIT_CAPTION = 'EDIT_CAPTION';

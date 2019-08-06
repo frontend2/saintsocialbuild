@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import SideBar from './SideBarComponent';
-import NavBar from './NavBarComponent';
 import Calendar from './CalendarComponent';
 import Captions from './CaptionsComponent';
 import FileManager from './FileManagerComponent';
-import { Switch, Route, Redirect, BrowserRouter, Link, withRouter } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addCaption } from '../redux/ActionCreators'
+import { addCaption, deleteCaption, editCaption } from '../redux/ActionCreators';
 
 const mapStateToProps = state => {
   return {
@@ -14,7 +12,9 @@ const mapStateToProps = state => {
   }
 }
 const mapDispatchToProps = dispatch => ({
-  addCaption: (title, content) => dispatch(addCaption(title, content))
+  addCaption: (title, content) => dispatch(addCaption(title, content)),
+  deleteCaption: (captionId) => dispatch(deleteCaption(captionId)),
+  editCaption: (captionId) => dispatch(editCaption(captionId))
 });
 
 
@@ -26,7 +26,7 @@ class Main extends Component {
               <Route path='/file-manager' component={FileManager} />
               <Route path='/calendar' component={Calendar} />
               <Route path='/captions' component={() => <Captions captions={this.props.captions}
-              addCaption = {this.props.addCaption} />} />
+              addCaption = {this.props.addCaption} deleteCaption = {this.props.deleteCaption} editCaption = {this.props.editCaption} />} />
               <Redirect to="/captions" />
           </Switch>
         );

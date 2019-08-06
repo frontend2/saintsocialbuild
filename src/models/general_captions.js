@@ -7,8 +7,8 @@ export const CAPTIONS =
         title: "First Caption",
         content:'Sample text for first caption',
         status: 1,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: '05-08-19 1:24:53',
+        created:'05-08-19 1:24:53'
         },
         {
         id: 1,
@@ -17,8 +17,8 @@ export const CAPTIONS =
         title: "Second  Caption",
         content:'Sample text for second caption',
         status: 1,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: '05-08-19 1:24:53',
+        created: '05-08-19 1:24:53'
         },
         {
         id: 2,
@@ -27,7 +27,7 @@ export const CAPTIONS =
         title: "Third Caption",
         content:'Sample text for third caption',
         status: 1,
-        changed: 'Mon Aug 05 2019 08:43:06 GMT-0500',
-        created:'Mon Aug 05 2019 08:43:06 GMT-0500'
+        changed: '05-08-19 1:24:53',
+        created: '05-08-19 1:24:53'
         },
     ];

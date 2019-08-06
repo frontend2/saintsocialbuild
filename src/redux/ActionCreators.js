@@ -7,3 +7,13 @@ export const addCaption = (title, content) => ({
     content: content,
     }
 });
+
+export const deleteCaption = (captionId) => ({
+    type: ActionTypes.DELETE_CAPTION,
+    payload : captionId
+  });
+
+  export const editCaption = (captionId) => ({
+      type: ActionTypes.EDIT_CAPTION,
+      payload : captionId
+    });
