@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/saintsocialbuild/static/css/main.2cce8147.chunk.css",
+    "main.js": "/saintsocialbuild/static/js/main.f3dc8a4d.chunk.js",
+    "main.js.map": "/saintsocialbuild/static/js/main.f3dc8a4d.chunk.js.map",
+    "runtime~main.js": "/saintsocialbuild/static/js/runtime~main.c0093636.js",
+    "runtime~main.js.map": "/saintsocialbuild/static/js/runtime~main.c0093636.js.map",
+    "static/css/2.81cb803e.chunk.css": "/saintsocialbuild/static/css/2.81cb803e.chunk.css",
+    "static/js/2.f9728f61.chunk.js": "/saintsocialbuild/static/js/2.f9728f61.chunk.js",
+    "static/js/2.f9728f61.chunk.js.map": "/saintsocialbuild/static/js/2.f9728f61.chunk.js.map",
+    "index.html": "/saintsocialbuild/index.html",
+    "precache-manifest.50221068b92620f141b670423c28c995.js": "/saintsocialbuild/precache-manifest.50221068b92620f141b670423c28c995.js",
+    "service-worker.js": "/saintsocialbuild/service-worker.js",
+    "static/css/2.81cb803e.chunk.css.map": "/saintsocialbuild/static/css/2.81cb803e.chunk.css.map",
+    "static/css/main.2cce8147.chunk.css.map": "/saintsocialbuild/static/css/main.2cce8147.chunk.css.map"
+  }
+}
