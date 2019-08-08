@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import NavBar from './NavBarComponent';
-import SideBar from './SideBarComponent'
+import { Loading } from './LoadingComponent';
 import { Switch, Route, Redirect, BrowserRouter, Link  } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import {Button,Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -14,7 +15,6 @@ const required = (val) => val && val.length;
 
 //MODAL COMPONENT
 class ModalComponent extends Component {
-
   constructor(props) {
     super(props);
     this.state={
@@ -76,56 +76,91 @@ class GenerateCaptions extends Component {
     this.toggleSaveModal = this.toggleSaveModal.bind(this);
     this.toggleEditModal = this.toggleEditModal.bind(this);
     this.toggleDeleteConfirmationModal = this.toggleDeleteConfirmationModal.bind(this);
-
-
+    this.notifyDelete = this.notifyDelete.bind(this);
+    this.notifyEdit = this.notifyEdit.bind(this);
   }
 
 //DELETE CAPTION
   deleteCaption() {
-    const captionId = this.state.deleteCaptionId;
-      this.props.deleteCaption(captionId)
+      const captionId = this.state.deleteCaptionId;
+      this.props.deleteCaption(captionId);
+      this.notifyDelete();
     }
-    //DELETE CAPTION
+//DELETE CAPTION
 
-    //TOGGLE MODAL
-    toggleSaveModal() {
-            this.setState({
-              isSaveModalOpen: !this.state.isSaveModalOpen
-            });
-          }
+//TOGGLE MODAL
+toggleSaveModal() {
+    this.setState({
+        isSaveModalOpen: !this.state.isSaveModalOpen
+    });
+}
 
-          toggleEditModal(captionId) {
-                  this.setState({
-                    isEditModalOpen: !this.state.isEditModalOpen,
-                    editCaptionId: captionId
-                  });
-                }
-                toggleDeleteConfirmationModal(captionId) {
-                        this.setState({
-                          isDeleteConfirmationModalOpen: !this.state.isDeleteConfirmationModalOpen,
-                          deleteCaptionId: captionId
-                        });
-                      }
-    //TOGGLE MODAL
+toggleEditModal(captionId) {
+    this.setState({
+        isEditModalOpen: !this.state.isEditModalOpen,
+        editCaptionId: captionId
+    });
+}
+toggleDeleteConfirmationModal(captionId) {
+    this.setState({
+        isDeleteConfirmationModalOpen: !this.state.isDeleteConfirmationModalOpen,
+        deleteCaptionId: captionId
+    });
+}
+//TOGGLE MODAL
 
-    //FORM SUBMIT
+//NOTIFY ACTIONS
+    notifyDelete = () => toast.error('Caption Deleted!', {
+    position: "bottom-right",
+    autoClose: 2500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true
+    });
+
+    notifyEdit = () => toast.info('Caption Updated!', {
+      position: "bottom-right",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true});
+//NOTIFY ACTIONS
+
+//FORM SUBMIT
       handleSubmit(values) {
         const captionId = this.state.editCaptionId;
         this.props.editCaption(captionId, values)
+        this.notifyEdit();
             //event.preventDefault();
         }
-    //FORM SUBMIT
-
-
-
+//FORM SUBMIT
 
 render(){
   const  RenderCaptions = ({ captions })  => {
-    if (captions != null) {
+    if(this.props.captionsLoading){
+      return(
+        <div className="mx-auto justify-content-center">
+         <Loading />
+        </div>
+      )
+    }
+    else if(captions.length === 0) {
+      return <div>No captions Saved.</div>;
+    }
+    else if (this.props.captionsErrMess) {
+            return(
+                    <div className="mx-auto justify-content-center">
+                        <h4>{this.props.captionsErrMess}</h4>
+                    </div>
+            );
+        }
+
+    else if (captions.length > 0 || captions != null) {
       return captions.map((caption, captionId) => {
         return (
-
-          <div key={captionId} className="col-lg-4 col-md-6 col-sm-12 mb-5">
+          <div key={captionId} className="col-lg-4 col-md-6 col-sm-12">
             {/* EDIT CAPTION MODAL */}
             <Modal isOpen={this.state.isEditModalOpen}>
               <ModalHeader>Edit Caption</ModalHeader>
@@ -169,15 +204,15 @@ render(){
               <div className="card-header">{caption.title}</div>
               <div className="card-body">
                 <p className="card-text">{caption.content}</p>
-                <Button color="primary" onClick={() => this.toggleEditModal(captionId)}>Edit</Button>
-                <Button color="danger" onClick = {() => this.toggleDeleteConfirmationModal(captionId)}>Delete</Button>
+                <button className="btn btn-primary btn-wth-icon mr-2" type = "button"
+                  onClick={() => this.toggleEditModal(captionId)}>Edit</button>
+                <button className="btn btn-danger btn-wth-icon" type = "button"
+                  onClick={() => this.toggleDeleteConfirmationModal(captionId)}>Delete</button>
               </div>
             </div>
           </div>
         );
       });
-    } else {
-      return <div>No captions Saved.</div>;
     }
   };
   return(
@@ -186,8 +221,6 @@ render(){
 }
 }
 //RENDER  CAPTIONS FROM STATE COMPONENT
-
-
 
 //MAIN CAPTIONS COMPONENT
 class Captions extends Component {
@@ -204,17 +237,26 @@ class Captions extends Component {
         };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
+    this.notifyAdd = this.notifyAdd.bind(this);
   }
 
 //FORM SUBMIT
   handleSubmit(values) {
-    this.props.addCaption(values.captionTitle, values.captionContent)
-        alert(JSON.stringify(values))
+    this.props.addCaption(values.captionTitle, values.captionContent);
+    this.notifyAdd();
         //event.preventDefault();
     }
 //FORM SUBMIT
 
-
+//NOTIFY ADD ACTION
+notifyAdd = () => toast.success('Caption Added!', {
+  position: "bottom-right",
+  autoClose: 2500,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true});
+//NOTIFY ADD ACTION
 
 //VALIDATE FORM FIELDS
 validate(captionTitle, captionContent) {
@@ -237,7 +279,6 @@ validate(captionTitle, captionContent) {
 //VALIDATE FORM FIELDS
 
 
-
 //TOGGLE MODAL
 toggleModal() {
         this.setState({
@@ -246,8 +287,11 @@ toggleModal() {
       }
 //TOGGLE MODAL
 
+componentDidMount() {
+  }
+
     render() {
-      const errors = this.validate(this.state.captionTitle, this.state.captionContent);
+      const errors = this.validate(this.state.captionTitle, this.state.captionContent)
         return(
           <div className="hk-pg-wrapper pb-0 px-0">
     {/* Modal */}
@@ -268,7 +312,7 @@ toggleModal() {
         </ModalBody>
         <ModalFooter>
             <Button color="secondary" onClick={this.toggleModal}>Cancel</Button>
-            <Button type="submit" color="primary" onClick={this.toggleModal}>Save Caption</Button>
+            <Button type="submit" color="primary">Save Caption</Button>
         </ModalFooter>
     </LocalForm>
 </Modal>
@@ -289,12 +333,13 @@ toggleModal() {
                                 <div className="fm-options-wrap">
                                     <button className="btn btn-primary btn-wth-icon icon-wthot-bg btn-lg" onClick = {this.toggleModal}>
                                     <span className="icon-label"><i className="fa fa-plus" />
-                                    </span><span className="btn-text">Add New</span></button>
+                                  </span><span className="btn-text">Add New</span></button>
                                 </div>
                             </header>
                             <div className="container-fluid">
                                 <div className="hk-row pt-15">
                                     <GenerateCaptions captions={this.props.captions} deleteCaption = {this.props.deleteCaption}
+                                      captionsLoading = {this.props.captionsLoading} captionsErrMess = {this.props.captionsErrMess}
                                        editCaption= {this.props.editCaption}/>
                                 </div>
                             </div>
