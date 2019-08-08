@@ -68,16 +68,21 @@ class GenerateCaptions extends Component {
     this.state={
       isSaveModalOpen: false,
       isEditModalOpen: false,
-      editCaptionId: null  }
+      isDeleteConfirmationModalOpen: false,
+      editCaptionId: null,
+      deleteCaptionId: null  }
     this.deleteCaption = this.deleteCaption.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggleSaveModal = this.toggleSaveModal.bind(this);
     this.toggleEditModal = this.toggleEditModal.bind(this);
+    this.toggleDeleteConfirmationModal = this.toggleDeleteConfirmationModal.bind(this);
+
 
   }
 
 //DELETE CAPTION
-  deleteCaption(captionId) {
+  deleteCaption() {
+    const captionId = this.state.deleteCaptionId;
       this.props.deleteCaption(captionId)
     }
     //DELETE CAPTION
@@ -95,6 +100,12 @@ class GenerateCaptions extends Component {
                     editCaptionId: captionId
                   });
                 }
+                toggleDeleteConfirmationModal(captionId) {
+                        this.setState({
+                          isDeleteConfirmationModalOpen: !this.state.isDeleteConfirmationModalOpen,
+                          deleteCaptionId: captionId
+                        });
+                      }
     //TOGGLE MODAL
 
     //FORM SUBMIT
@@ -115,7 +126,7 @@ render(){
         return (
 
           <div key={captionId} className="col-lg-4 col-md-6 col-sm-12 mb-5">
-            {/* EDIT CAPTION COMPONENT */}
+            {/* EDIT CAPTION MODAL */}
             <Modal isOpen={this.state.isEditModalOpen}>
               <ModalHeader>Edit Caption</ModalHeader>
               <LocalForm onSubmit={(values)=> this.handleSubmit(values, captionId)}>
@@ -138,13 +149,28 @@ render(){
                   </ModalFooter>
               </LocalForm>
           </Modal>
-          {/* EDIT CAPTION COMPONENT */}
+          {/* EDIT CAPTION MODAL */}
+
+          {/* DELETE CAPTION CONFIRMATION MODAL */}
+          <Modal isOpen={this.state.isDeleteConfirmationModalOpen}>
+            <ModalHeader>Delete Caption</ModalHeader>
+                <ModalBody>
+                    <div className="form-group">
+                      Are you sure you want to delete this caption?
+                    </div>
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="secondary" onClick={this.toggleDeleteConfirmationModal}>No</Button>
+                    <Button type="button" color="danger" onClick = {this.deleteCaption}>Yes</Button>
+                </ModalFooter>
+        </Modal>
+        {/* DELETE CAPTION CONFIRMATION MODAL */}
             <div className="card">
               <div className="card-header">{caption.title}</div>
               <div className="card-body">
                 <p className="card-text">{caption.content}</p>
                 <Button color="primary" onClick={() => this.toggleEditModal(captionId)}>Edit</Button>
-                <Button color="danger" onClick = {() => this.deleteCaption(captionId)}>Delete</Button>
+                <Button color="danger" onClick = {() => this.toggleDeleteConfirmationModal(captionId)}>Delete</Button>
               </div>
             </div>
           </div>
