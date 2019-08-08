@@ -13,7 +13,11 @@ export const deleteCaption = (captionId) => ({
     payload : captionId
   });
 
-  export const editCaption = (captionId) => ({
+  export const editCaption = (captionId, values) => ({
       type: ActionTypes.EDIT_CAPTION,
-      payload : captionId
+      payload:{
+        title: values.captionTitle,
+        content: values.captionContent,
+        captionId : captionId,
+      }
     });

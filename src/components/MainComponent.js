@@ -14,7 +14,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   addCaption: (title, content) => dispatch(addCaption(title, content)),
   deleteCaption: (captionId) => dispatch(deleteCaption(captionId)),
-  editCaption: (captionId) => dispatch(editCaption(captionId))
+  editCaption: (captionId, values) => dispatch(editCaption(captionId, values))
 });
 
 
@@ -24,7 +24,6 @@ class Main extends Component {
         return(
         <Switch>
               <Route path='/file-manager' component={FileManager} />
-              <Route path='/calendar' component={Calendar} />
               <Route path='/captions' component={() => <Captions captions={this.props.captions}
               addCaption = {this.props.addCaption} deleteCaption = {this.props.deleteCaption} editCaption = {this.props.editCaption} />} />
               <Redirect to="/captions" />

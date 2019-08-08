@@ -56,8 +56,6 @@ class ModalComponent extends Component {
 </Modal>)
   }
 }
-
-
 //MODAL COMPONENT
 
 
@@ -69,7 +67,8 @@ class GenerateCaptions extends Component {
     super(props);
     this.state={
       isSaveModalOpen: false,
-      isEditModalOpen: false  }
+      isEditModalOpen: false,
+      editCaptionId: null  }
     this.deleteCaption = this.deleteCaption.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggleSaveModal = this.toggleSaveModal.bind(this);
@@ -79,18 +78,9 @@ class GenerateCaptions extends Component {
 
 //DELETE CAPTION
   deleteCaption(captionId) {
-      console.log('DELETE CAPTION', captionId);
       this.props.deleteCaption(captionId)
     }
     //DELETE CAPTION
-
-
-    //EDIT CAPTION
-      editCaption(captionId) {
-          this.props.editCaption(captionId)
-        }
-        //EDIT CAPTION
-
 
     //TOGGLE MODAL
     toggleSaveModal() {
@@ -99,17 +89,18 @@ class GenerateCaptions extends Component {
             });
           }
 
-          toggleEditModal() {
+          toggleEditModal(captionId) {
                   this.setState({
-                    isEditModalOpen: !this.state.isEditModalOpen
+                    isEditModalOpen: !this.state.isEditModalOpen,
+                    editCaptionId: captionId
                   });
                 }
     //TOGGLE MODAL
 
-
     //FORM SUBMIT
       handleSubmit(values) {
-            console.log(JSON.stringify(values))
+        const captionId = this.state.editCaptionId;
+        this.props.editCaption(captionId, values)
             //event.preventDefault();
         }
     //FORM SUBMIT
@@ -124,6 +115,7 @@ render(){
         return (
 
           <div key={captionId} className="col-lg-4 col-md-6 col-sm-12 mb-5">
+            {/* EDIT CAPTION COMPONENT */}
             <Modal isOpen={this.state.isEditModalOpen}>
               <ModalHeader>Edit Caption</ModalHeader>
               <LocalForm onSubmit={(values)=> this.handleSubmit(values, captionId)}>
@@ -142,15 +134,16 @@ render(){
                   </ModalBody>
                   <ModalFooter>
                       <Button color="secondary" onClick={this.toggleEditModal}>Cancel</Button>
-                      <Button type="submit" color="primary" onClick = {() => this.editCaption(captionId)}>Update Caption</Button>
+                      <Button type="submit" color="primary">Update Caption</Button>
                   </ModalFooter>
               </LocalForm>
           </Modal>
+          {/* EDIT CAPTION COMPONENT */}
             <div className="card">
               <div className="card-header">{caption.title}</div>
               <div className="card-body">
                 <p className="card-text">{caption.content}</p>
-                <Button color="primary" onClick={this.toggleEditModal}>Edit</Button>
+                <Button color="primary" onClick={() => this.toggleEditModal(captionId)}>Edit</Button>
                 <Button color="danger" onClick = {() => this.deleteCaption(captionId)}>Delete</Button>
               </div>
             </div>
