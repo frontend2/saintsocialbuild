@@ -9,7 +9,7 @@ import NavBar from './components/NavBarComponent';
 import SideBar from './components/SideBarComponent';
 import { Provider } from 'react-redux';
 import { ConfigureStore } from './redux/ConfigureStore';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const store = ConfigureStore();

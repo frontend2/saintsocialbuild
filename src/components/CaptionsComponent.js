@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Loading } from './LoadingComponent';
-import { Switch, Route, Redirect, BrowserRouter, Link  } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import {Button,Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { toast } from 'react-toastify';

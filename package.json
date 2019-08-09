@@ -2,10 +2,11 @@
   "name": "saintsocial",
   "version": "0.1.0",
   "private": true,
-  "homepage":  "http://frontend2.github.io/saintsocialbuild",
+  "homepage": "http://frontend2.github.io/saintsocialbuild",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "cross-fetch": "^3.0.4",
+    "gh-pages": "^2.1.1",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

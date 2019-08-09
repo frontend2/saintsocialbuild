@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import NavBar from './NavBarComponent';
-import SideBar from './SideBarComponent'
-import { Switch, Route, Redirect, BrowserRouter, Link  } from 'react-router-dom';
-
 
 class Calendar extends Component {
-
     render() {
         return(
             <div className="hk-pg-wrapper pb-0 px-0">
@@ -98,9 +93,8 @@ class Calendar extends Component {
                 </div>
             </div>
         </div>
-      
+
         );
       }
   }
- 
-export default Calendar; 
+export default Calendar;

@@ -10,35 +10,35 @@ class SideBar extends Component {
             <div className="nicescroll-bar">
                 <div className="navbar-nav-wrap">
                     <ul className="navbar-nav flex-column">
-                        <li className="nav-item active">
-                            <a className="nav-link link-with-badge" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
+                        <li className="nav-item">
+                          <Link className="nav-link" to="/publish">
                                 <span className="feather-icon"><i data-feather="send"></i></span>
                                 <span className="nav-link-text">Publish/Post</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="javascript:void(0);" >
+                            <Link className="nav-link" to="/account-manager">
                                 <span className="feather-icon"><i data-feather="user-plus"></i></span>
                                 <span className="nav-link-text">Account Manager</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link link-with-badge" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
+                            <Link className="nav-link" to="/groups-manager">
                                 <span className="feather-icon"><i data-feather="layers"></i></span>
                                 <span className="nav-link-text">Groups Manager</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link link-with-badge" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
+                          <Link className="nav-link" to="/network-walls">
                                 <span className="feather-icon"><i data-feather="layout"></i></span>
                                 <span className="nav-link-text">Network Walls</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link link-with-badge" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
+                          <Link className="nav-link" to="/dashboard">
                                 <span className="feather-icon"><i data-feather="pie-chart"></i></span>
                                 <span className="nav-link-text">Dashboard</span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <hr className="nav-separator"></hr>
@@ -48,40 +48,40 @@ class SideBar extends Component {
                     </div>
                     <ul className="navbar-nav flex-column">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/captions">
                                 <span className="feather-icon"><i data-feather="file-text"></i></span>
                                 <span className="nav-link-text">Captions/Scripts</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/image-editor">
                                  <span className="feather-icon"><i data-feather="edit"></i></span>
                                  <span className="nav-link-text">Image Editor</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/filemanager">
+                            <Link className="nav-link" to="/file-manager">
                                 <span className="feather-icon"><i data-feather="folder"></i></span>
                                 <span className="nav-link-text">File Manager</span>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/schedules">
                                 <span className="feather-icon"><i data-feather="calendar"></i></span>
                                 <span className="nav-link-text">Schedules/Calendar</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/reports">
                                  <span className="feather-icon"><i data-feather="bar-chart"></i></span>
                                  <span className="nav-link-text">Reports/KPIs</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/chatbots">
                                 <span className="feather-icon"><i data-feather="message-square"></i></span>
                                 <span className="nav-link-text">Chatbots</span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -90,5 +90,5 @@ class SideBar extends Component {
         )
       }
   }
- 
+
 export default SideBar;
