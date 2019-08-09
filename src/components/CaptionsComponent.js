@@ -12,53 +12,6 @@ const required = (val) => val && val.length;
 //FORM VALIDATORS
 
 
-//MODAL COMPONENT
-class ModalComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      isModalOpen: false  }
-    this.deleteCaption = this.deleteCaption.bind(this);
-    this.toggleModal = this.toggleModal.bind(this);
-  }
-
-  //TOGGLE MODAL
-  toggleModal() {
-          this.setState({
-            isModalOpen: !this.state.isModalOpen
-          });
-        }
-  //TOGGLE MODAL
-
-  render(){
-    return(
-  <Modal isOpen={this.state.isModalOpen}>
-    <ModalHeader>Edit Caption</ModalHeader>
-    <LocalForm onSubmit={(values)=> this.handleSubmit(values)}>
-        <ModalBody>
-            <div className="form-group">
-                <label htmlFor="captionTitle">Caption Title</label>
-                <Control.text className="form-control" name="captionTitle" id="captionTitle" placeholder="Add caption title..." model=".captionTitle" validators={{required}}/>
-                <Errors className="text-danger" model=".captionTitle" show="touched" messages={{ required: 'Required' }} />
-            </div>
-            <div className="form-group">
-                <label htmlFor="captionContent">Caption Content</label>
-                <Control.textarea className="form-control" model=".captionContent" id="captionContent" name="captionContent" rows="3" placeholder="Enter caption content..." validators={{required}}/>
-                <Errors className="text-danger" model=".captionContent" show="touched" messages={{ required: 'Required' }} />
-            </div>
-        </ModalBody>
-        <ModalFooter>
-            <Button color="secondary" onClick={this.toggleModal}>Cancel</Button>
-            <Button type="submit" color="primary" onClick={this.toggleModal}>Save Caption</Button>
-        </ModalFooter>
-    </LocalForm>
-</Modal>)
-  }
-}
-//MODAL COMPONENT
-
-
-
 //RENDER  CAPTIONS FROM STATE COMPONENT
 class GenerateCaptions extends Component {
 
@@ -290,7 +243,6 @@ componentDidMount() {
   }
 
     render() {
-      const errors = this.validate(this.state.captionTitle, this.state.captionContent)
         return(
           <div className="hk-pg-wrapper pb-0 px-0">
     {/* Modal */}

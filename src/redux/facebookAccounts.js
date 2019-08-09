@@ -1,16 +1,16 @@
 import * as ActionTypes from './ActionTypes';
 
-export const facebookAccounts = (state = {isLoading: true, errMess: null, facebookAccounts:[]}, action) => {
+export const facebookAccounts = (state = {facebookAccountsLoading: true, facebookAccountsErrMess: null, facebookAccounts:[]}, action) => {
     switch (action.type) {
       //FETCH CAPTIONS
       case ActionTypes.ADD_FACEBOOK_ACCOUNTS:
-            return {...state, isLoading: false, errMess: null, facebookAccounts: action.payload};
+            return {...state, facebookAccountsLoading: false, facebookAccountsErrMess: null, facebookAccounts: action.payload};
 
       case ActionTypes.FACEBOOK_ACCOUNTS_LOADING:
-            return {...state, isLoading: true, errMess: null, facebookAccounts: []}
+            return {...state, facebookAccountsLoading: true, facebookAccountsErrMess: null, facebookAccounts: []}
 
       case ActionTypes.FACEBOOK_ACCOUNTS_FAILED:
-            return {...state, isLoading: false, errMess: action.payload};
+            return {...state, facebookAccountsLoading: false, facebookAccountsErrMess: action.payload};
       //FETCH CAPTIONS
 
         default:
